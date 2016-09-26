@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "LFWSWebSocket.h"
+
 @interface ViewController ()
 
 @end
@@ -16,8 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    NSURL *url = [NSURL URLWithString:@"ws:"];
+    LFWSWebSocket *webSocket = [[LFWSWebSocket alloc] initWithURL:url protocols:nil];
+    [webSocket open];
+    
+    [webSocket setTextCallback:^(NSString *text) {
+        
+        NSLog(@"%@",text);
+        
+    }];
+    [webSocket sendText:@"text"];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

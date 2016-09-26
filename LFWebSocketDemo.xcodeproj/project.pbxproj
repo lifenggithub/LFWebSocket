@@ -15,6 +15,11 @@
 		C079304D1D98E18900C4CBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C079304B1D98E18900C4CBCC /* LaunchScreen.storyboard */; };
 		C07930581D98E18900C4CBCC /* LFWebSocketDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07930571D98E18900C4CBCC /* LFWebSocketDemoTests.m */; };
 		C07930631D98E18900C4CBCC /* LFWebSocketDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C07930621D98E18900C4CBCC /* LFWebSocketDemoUITests.m */; };
+		C07930731D98E1DE00C4CBCC /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C07930721D98E1DE00C4CBCC /* NSString+Base64.m */; };
+		C079307C1D98E32400C4CBCC /* LFWSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C079307B1D98E32400C4CBCC /* LFWSFrame.m */; };
+		C079307F1D98E5EB00C4CBCC /* LFWSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C079307E1D98E5EB00C4CBCC /* LFWSMessage.m */; };
+		C07930821D98E79000C4CBCC /* LFWSMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C07930811D98E79000C4CBCC /* LFWSMessageProcessor.m */; };
+		C07930851D98ECD300C4CBCC /* LFWSWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C07930841D98ECD300C4CBCC /* LFWSWebSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		C079305E1D98E18900C4CBCC /* LFWebSocketDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFWebSocketDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07930621D98E18900C4CBCC /* LFWebSocketDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFWebSocketDemoUITests.m; sourceTree = "<group>"; };
 		C07930641D98E18900C4CBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07930711D98E1DE00C4CBCC /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		C07930721D98E1DE00C4CBCC /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		C079307A1D98E32400C4CBCC /* LFWSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFWSFrame.h; sourceTree = "<group>"; };
+		C079307B1D98E32400C4CBCC /* LFWSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFWSFrame.m; sourceTree = "<group>"; };
+		C079307D1D98E5EB00C4CBCC /* LFWSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFWSMessage.h; sourceTree = "<group>"; };
+		C079307E1D98E5EB00C4CBCC /* LFWSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFWSMessage.m; sourceTree = "<group>"; };
+		C07930801D98E79000C4CBCC /* LFWSMessageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFWSMessageProcessor.h; sourceTree = "<group>"; };
+		C07930811D98E79000C4CBCC /* LFWSMessageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFWSMessageProcessor.m; sourceTree = "<group>"; };
+		C07930831D98ECD300C4CBCC /* LFWSWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFWSWebSocket.h; sourceTree = "<group>"; };
+		C07930841D98ECD300C4CBCC /* LFWSWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFWSWebSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,7 @@
 		C079303C1D98E18900C4CBCC /* LFWebSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C07930701D98E19800C4CBCC /* LFWebSocket */,
 				C07930401D98E18900C4CBCC /* AppDelegate.h */,
 				C07930411D98E18900C4CBCC /* AppDelegate.m */,
 				C07930431D98E18900C4CBCC /* ViewController.h */,
@@ -138,6 +154,23 @@
 				C07930641D98E18900C4CBCC /* Info.plist */,
 			);
 			path = LFWebSocketDemoUITests;
+			sourceTree = "<group>";
+		};
+		C07930701D98E19800C4CBCC /* LFWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C07930711D98E1DE00C4CBCC /* NSString+Base64.h */,
+				C07930721D98E1DE00C4CBCC /* NSString+Base64.m */,
+				C079307A1D98E32400C4CBCC /* LFWSFrame.h */,
+				C079307B1D98E32400C4CBCC /* LFWSFrame.m */,
+				C079307D1D98E5EB00C4CBCC /* LFWSMessage.h */,
+				C079307E1D98E5EB00C4CBCC /* LFWSMessage.m */,
+				C07930801D98E79000C4CBCC /* LFWSMessageProcessor.h */,
+				C07930811D98E79000C4CBCC /* LFWSMessageProcessor.m */,
+				C07930831D98ECD300C4CBCC /* LFWSWebSocket.h */,
+				C07930841D98ECD300C4CBCC /* LFWSWebSocket.m */,
+			);
+			path = LFWebSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07930731D98E1DE00C4CBCC /* NSString+Base64.m in Sources */,
+				C07930821D98E79000C4CBCC /* LFWSMessageProcessor.m in Sources */,
 				C07930451D98E18900C4CBCC /* ViewController.m in Sources */,
 				C07930421D98E18900C4CBCC /* AppDelegate.m in Sources */,
 				C079303F1D98E18900C4CBCC /* main.m in Sources */,
+				C07930851D98ECD300C4CBCC /* LFWSWebSocket.m in Sources */,
+				C079307C1D98E32400C4CBCC /* LFWSFrame.m in Sources */,
+				C079307F1D98E5EB00C4CBCC /* LFWSMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
